@@ -1,0 +1,22 @@
+<h1>Produtos</h1>
+
+<a href="/criar/">Novo Produto</a>
+
+<hr>
+
+{% for produto in produtos %}
+
+    <p>
+        {{ produto.nome }} -
+        R$ {{ produto.preco }}
+
+        <a href="/editar/{{ produto.id }}/">
+            Editar
+        </a>
+
+        <a href="/deletar/{{ produto.id }}/">
+            Deletar
+        </a>
+    </p>
+
+{% endfor %}
